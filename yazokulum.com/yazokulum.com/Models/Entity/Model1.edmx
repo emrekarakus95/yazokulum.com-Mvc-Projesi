@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="yazokuluModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Sayfa1">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Akademik Birim" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dersin Kodu" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dersin Adı" Type="nvarchar" MaxLength="255" />
+          <Property Name="Teori" Type="float" />
+          <Property Name="Uygulama" Type="float" />
+          <Property Name="Kredi" Type="float" />
+          <Property Name="AKTS" Type="float" />
+          <Property Name="Bölümü" Type="nvarchar" MaxLength="255" />
+          <Property Name="Öğretim Elemanı" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'yazokulu.dbo.Trakya' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Trakya">
+          <Property Name="TRAKYA ÜNİVERSİTESİ" Type="nvarchar" MaxLength="255" />
+          <Property Name="F2" Type="nvarchar" MaxLength="255" />
+          <Property Name="F3" Type="nvarchar" MaxLength="255" />
+          <Property Name="F4" Type="float" />
+          <Property Name="F5" Type="float" />
+          <Property Name="F6" Type="float" />
+          <Property Name="F7" Type="float" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+          <Property Name="F11" Type="nvarchar" MaxLength="255" />
+          <Property Name="F12" Type="nvarchar" MaxLength="255" />
+          <Property Name="F13" Type="float" />
+          <Property Name="F14" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <EntityType Name="zonguldak">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Akademik Birim" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dersin Kodu" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dersin Adı" Type="nvarchar" MaxLength="255" />
+          <Property Name="Teori" Type="float" />
+          <Property Name="Uygulama" Type="float" />
+          <Property Name="Kredi" Type="float" />
+          <Property Name="AKTS" Type="float" />
+          <Property Name="Bölümü" Type="nvarchar" MaxLength="255" />
+          <Property Name="Öğretim Elemanı" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+          <Property Name="F11" Type="nvarchar" MaxLength="255" />
+          <Property Name="F12" Type="nvarchar" MaxLength="255" />
+          <Property Name="F13" Type="nvarchar" MaxLength="255" />
+          <Property Name="F14" Type="nvarchar" MaxLength="255" />
+          <Property Name="F15" Type="nvarchar" MaxLength="255" />
+          <Property Name="F16" Type="nvarchar" MaxLength="255" />
+          <Property Name="F17" Type="nvarchar" MaxLength="255" />
+          <Property Name="F18" Type="nvarchar" MaxLength="255" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="yazokuluModelStoreContainer">
+          <EntitySet Name="Sayfa1" EntityType="Self.Sayfa1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="zonguldak" EntityType="Self.zonguldak" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="yazokuluModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Sayfa1">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Akademik_Birim" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dersin_Kodu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dersin_Adı" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Teori" Type="Double" />
+          <Property Name="Uygulama" Type="Double" />
+          <Property Name="Kredi" Type="Double" />
+          <Property Name="AKTS" Type="Double" />
+          <Property Name="Bölümü" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Öğretim_Elemanı" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="zonguldak">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Akademik_Birim" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dersin_Kodu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dersin_Adı" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Teori" Type="Double" />
+          <Property Name="Uygulama" Type="Double" />
+          <Property Name="Kredi" Type="Double" />
+          <Property Name="AKTS" Type="Double" />
+          <Property Name="Bölümü" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Öğretim_Elemanı" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F11" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F12" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F13" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F14" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F15" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F16" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F17" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F18" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="yazokuluEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Sayfa1" EntityType="Self.Sayfa1" />
+          <EntitySet Name="zonguldak" EntityType="Self.zonguldak" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="yazokuluModelStoreContainer" CdmEntityContainer="yazokuluEntities">
+          <EntitySetMapping Name="Sayfa1">
+            <EntityTypeMapping TypeName="yazokuluModel.Sayfa1">
+              <MappingFragment StoreEntitySet="Sayfa1">
+                <ScalarProperty Name="Akademik_Birim" ColumnName="Akademik Birim" />
+                <ScalarProperty Name="Dersin_Kodu" ColumnName="Dersin Kodu" />
+                <ScalarProperty Name="Dersin_Adı" ColumnName="Dersin Adı" />
+                <ScalarProperty Name="Teori" ColumnName="Teori" />
+                <ScalarProperty Name="Uygulama" ColumnName="Uygulama" />
+                <ScalarProperty Name="Kredi" ColumnName="Kredi" />
+                <ScalarProperty Name="AKTS" ColumnName="AKTS" />
+                <ScalarProperty Name="Bölümü" ColumnName="Bölümü" />
+                <ScalarProperty Name="Öğretim_Elemanı" ColumnName="Öğretim Elemanı" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zonguldak">
+            <EntityTypeMapping TypeName="yazokuluModel.zonguldak">
+              <MappingFragment StoreEntitySet="zonguldak">
+                <ScalarProperty Name="Akademik_Birim" ColumnName="Akademik Birim" />
+                <ScalarProperty Name="Dersin_Kodu" ColumnName="Dersin Kodu" />
+                <ScalarProperty Name="Dersin_Adı" ColumnName="Dersin Adı" />
+                <ScalarProperty Name="Teori" ColumnName="Teori" />
+                <ScalarProperty Name="Uygulama" ColumnName="Uygulama" />
+                <ScalarProperty Name="Kredi" ColumnName="Kredi" />
+                <ScalarProperty Name="AKTS" ColumnName="AKTS" />
+                <ScalarProperty Name="Bölümü" ColumnName="Bölümü" />
+                <ScalarProperty Name="Öğretim_Elemanı" ColumnName="Öğretim Elemanı" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+                <ScalarProperty Name="F11" ColumnName="F11" />
+                <ScalarProperty Name="F12" ColumnName="F12" />
+                <ScalarProperty Name="F13" ColumnName="F13" />
+                <ScalarProperty Name="F14" ColumnName="F14" />
+                <ScalarProperty Name="F15" ColumnName="F15" />
+                <ScalarProperty Name="F16" ColumnName="F16" />
+                <ScalarProperty Name="F17" ColumnName="F17" />
+                <ScalarProperty Name="F18" ColumnName="F18" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

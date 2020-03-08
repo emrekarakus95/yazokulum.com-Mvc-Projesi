@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="yazokuluModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Sayfa1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Akademik Birim" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dersin Kodu" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dersin Adı" Type="nvarchar" MaxLength="255" />
+    <Property Name="Teori" Type="float" />
+    <Property Name="Uygulama" Type="float" />
+    <Property Name="Kredi" Type="float" />
+    <Property Name="AKTS" Type="float" />
+    <Property Name="Bölümü" Type="nvarchar" MaxLength="255" />
+    <Property Name="Öğretim Elemanı" Type="nvarchar" MaxLength="255" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'yazokulu.dbo.Trakya' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Trakya">
+          <Property Name="TRAKYA ÜNİVERSİTESİ" Type="nvarchar" MaxLength="255" />
+          <Property Name="F2" Type="nvarchar" MaxLength="255" />
+          <Property Name="F3" Type="nvarchar" MaxLength="255" />
+          <Property Name="F4" Type="float" />
+          <Property Name="F5" Type="float" />
+          <Property Name="F6" Type="float" />
+          <Property Name="F7" Type="float" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+          <Property Name="F11" Type="nvarchar" MaxLength="255" />
+          <Property Name="F12" Type="nvarchar" MaxLength="255" />
+          <Property Name="F13" Type="float" />
+          <Property Name="F14" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="zonguldak">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Akademik Birim" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dersin Kodu" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dersin Adı" Type="nvarchar" MaxLength="255" />
+    <Property Name="Teori" Type="float" />
+    <Property Name="Uygulama" Type="float" />
+    <Property Name="Kredi" Type="float" />
+    <Property Name="AKTS" Type="float" />
+    <Property Name="Bölümü" Type="nvarchar" MaxLength="255" />
+    <Property Name="Öğretim Elemanı" Type="nvarchar" MaxLength="255" />
+    <Property Name="F10" Type="nvarchar" MaxLength="255" />
+    <Property Name="F11" Type="nvarchar" MaxLength="255" />
+    <Property Name="F12" Type="nvarchar" MaxLength="255" />
+    <Property Name="F13" Type="nvarchar" MaxLength="255" />
+    <Property Name="F14" Type="nvarchar" MaxLength="255" />
+    <Property Name="F15" Type="nvarchar" MaxLength="255" />
+    <Property Name="F16" Type="nvarchar" MaxLength="255" />
+    <Property Name="F17" Type="nvarchar" MaxLength="255" />
+    <Property Name="F18" Type="nvarchar" MaxLength="255" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="yazokuluModelStoreContainer">
+    <EntitySet Name="Sayfa1" EntityType="Self.Sayfa1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="zonguldak" EntityType="Self.zonguldak" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

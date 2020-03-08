@@ -1,0 +1,42 @@
+﻿@using yazokulum.com.Models.Entity;
+@model List<Sayfa1>
+@{
+    ViewBag.Title = "yazokullari";
+    Layout = "~/Views/Shared/_yazokullarilayout.cshtml";
+}
+
+<h2>Yaz Okulları Arama Sayfası</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Akademik Birim</th>
+        <th>Dersin Kodu</th>
+        <th>Dersin Adı</th>
+        <th>Teori</th>
+        <th>Uygulama</th>
+        <th>Kredi</th>
+        <th>AKTS</th>
+        <th>Bölümü</th>
+        <th>Öğretim Elemanı</th>
+        <tbody>
+            @foreach (var tbl1 in Model)
+            {
+                <tr>
+                    <td>@tbl1.Akademik_Birim</td>
+                    <td>@tbl1.Dersin_Kodu</td>
+                    <td>@tbl1.Dersin_Adı</td>
+                    <td>@tbl1.Teori</td>
+                    <td>@tbl1.Uygulama</td>
+                    <td>@tbl1.Kredi</td>
+                    <td>@tbl1.AKTS</td>
+                    <td>@tbl1.Bölümü</td>
+                    <td>@tbl1.Öğretim_Elemanı</td>
+                </tr>
+
+            }
+
+                
+        </tbody>
+    </tr>
+
+</table>
+

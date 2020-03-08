@@ -1,0 +1,28 @@
+﻿@model yazokulum.com.Models.ExternalLoginListViewModel
+@using Microsoft.Owin.Security
+
+<h4>Oturum açmak için başka bir hizmet kullanın.</h4>
+<hr />
+@{
+    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+    if (loginProviders.Count() == 0) {
+        <div>
+            <p>
+                Yapılandırılmış bir dış kimlik doğrulama hizmeti yok. Dış hizmetlerle oturum açmayı destekleyen bu ASP.NET uygulamasının kurulumu hakkında ayrıntılı bilgi edinmek için <a href="http://go.microsoft.com/fwlink/?LinkId=403804">bu makaleye</a>
+                göz atın.
+            </p>
+        </div>
+    }
+    else {
+        using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl })) {
+            @Html.AntiForgeryToken()
+            <div id="socialLoginList">
+                <p>
+                    @foreach (AuthenticationDescription p in loginProviders) {
+                        <button type="submit" class="btn btn-default" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="@p.Caption hesabınızı kullanarak oturum açın">@p.AuthenticationType</button>
+                    }
+                </p>
+            </div>
+        }
+    }
+}
